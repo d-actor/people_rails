@@ -1,2 +1,35 @@
-<h1>People#edit</h1>
-<p>Find me in app/views/people/edit.html.erb</p>
+<h2 class="center">Edit Entry</h2>
+<%= render 'layouts/navbar' %>
+<%= yield %>
+<hr>
+
+<%= form_for @person do |f| %>
+
+  <%= f.label :first_name %>
+  <%= f.text_field :first_name %>
+  <br>
+
+  <%= f.label :last_name %>
+  <%= f.text_field :last_name %>
+  <br>
+
+  <%= f.label :age %>
+  <%= f.text_field :age %>
+  <br>
+
+  <%= f.label :career %>
+  <%= f.text_field :career %>
+  <br>
+
+  <%= f.label :single %>
+  <%= f.check_box :single %>
+  <br>
+
+  <%= f.label :movie_quote %>
+  <%= f.text_area :movie_quote %>
+  <br>
+  <%= f.submit %>
+
+<% end %>
+
+<%= link_to "Back", people_path %>
