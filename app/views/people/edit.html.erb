@@ -1,35 +1,43 @@
-<h2 class="center">Edit Entry</h2>
+<h2 class="center white-text">Edit Entry</h2>
 <%= render 'layouts/navbar' %>
 <%= yield %>
 <hr>
 
-<%= form_for @person do |f| %>
+<div class="container white">
+  <%= form_for @person do |f| %>
 
-  <%= f.label :first_name %>
-  <%= f.text_field :first_name %>
-  <br>
+    <%= f.label :first_name %>
+    <%= f.text_field :first_name %>
+    <br>
 
-  <%= f.label :last_name %>
-  <%= f.text_field :last_name %>
-  <br>
+    <%= f.label :last_name %>
+    <%= f.text_field :last_name %>
+    <br>
 
-  <%= f.label :age %>
-  <%= f.text_field :age %>
-  <br>
+    <%= f.label :age %>
+    <%= f.text_field :age %>
+    <br>
 
-  <%= f.label :career %>
-  <%= f.text_field :career %>
-  <br>
+    <%= f.label :career %>
+    <%= f.text_field :career %>
+    <br>
 
-  <%= f.label :single %>
-  <%= f.check_box :single %>
-  <br>
+    <%= f.check_box :single %>
+    <%= f.label :single %>
+    <br>
 
-  <%= f.label :movie_quote %>
-  <%= f.text_area :movie_quote %>
-  <br>
-  <%= f.submit %>
+    <%= f.label :movie_quote %>
+    <%= f.text_area :movie_quote %>
+    <br>
+    <div class="center blue-text">
+      <%= f.submit %>
+    </div>
 
-<% end %>
+  <% end %>
+</div>
 
-<%= link_to "Back", people_path %>
+<br>
+
+<div class="btn white">
+  <%= link_to "Back", people_path %>
+</div>

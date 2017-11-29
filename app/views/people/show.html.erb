@@ -1,46 +1,50 @@
-<h2 class="center"></h2>
 <%= render 'layouts/navbar' %>
 <%= yield %>
 <hr>
+<div class="white-text">
+  <h5>
+    Name:
+    <br>
+  </h5>
+  <h4>
+    <%= @person.first_name + " " + @person.last_name %>
+  </h4>
 
-<h5>
-  Name:
+  <h5>
+    Age:
+    <br>
+  </h5>
+  <h4>
+    <%= @person.age %>
+  </h4>
+
+  <h5>
+    Career:
+    <br>
+  </h5>
+  <h4>
+    <%= @person.career %>
+  </h4>
+
+  <h5>
+    Single?
+    <br>
+  </h5>
+  <h4>
+    <%= @person.single %>
+  </h4>
+
+  <h5>
+    Favorite Movie Quote:
+    <br>
+  </h5>
+  <h4>
+    <%= @person.movie_quote %>
+  </h4>
+
   <br>
-</h5>
-<h4>
-  <%= @person.first_name + " " + @person.last_name %>
-</h4>
+</div>
 
-<h5>
-  Age:
-  <br>
-</h5>
-<h4>
-  <%= @person.age %>
-</h4>
-
-<h5>
-  Career:
-  <br>
-</h5>
-<h4>
-  <%= @person.career %>
-</h4>
-
-<h5>
-  Single?
-  <br>
-</h5>
-<h4>
-  <%= @person.single %>
-</h4>
-
-<h5>
-  Favorite Movie Quote:
-  <br>
-</h5>
-<h4>
-  <%= @person.movie_quote %>
-</h4>
-
-<%= link_to "Back", people_path %>
+<div class="btn white">
+  <%= link_to "Back", people_path %>
+</div>
