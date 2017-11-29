@@ -1,2 +1,28 @@
-<h1>Dogs#index</h1>
-<p>Find me in app/views/dogs/index.html.erb</p>
+<h1 class="center white-text">Doggos</h1>
+<%= render 'layouts/navbar' %>
+<%= yield %>
+<hr>
+<div class="center">
+  <h4 class="teal-text"><%= button_to 'Enter New Pup', new_dog_path, :method => "get" %></h4>
+</div>
+
+<div class="row">
+ <% @dogs.each do |dog| %>
+  <div class="col s4">
+    <div class="card teal accent-1">
+      <div class="card-content blue-grey-text">
+        <span class="card-title center"><%= dog.name %></span>
+        <div class="card-action center">
+            <%= link_to 'View', dog_path(dog) %>
+            <%= link_to 'Edit', edit_dog_path(dog) %>
+            <%= link_to 'Delete', dog, method: :delete %>
+        </div>
+      </div>
+    </div>
+  </div>
+  <% end %>
+</div>
+
+<hr>
+<%= render 'layouts/navbar' %>
+<%= yield %>

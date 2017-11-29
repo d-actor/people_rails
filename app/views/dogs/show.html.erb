@@ -1,2 +1,42 @@
-<h1>Dogs#show</h1>
-<p>Find me in app/views/dogs/show.html.erb</p>
+<%= render 'layouts/navbar' %>
+<%= yield %>
+<hr>
+<div class="white-text">
+  <h5>
+    Name:
+    <br>
+  </h5>
+  <h4>
+    <%= @dog.name %>
+  </h4>
+
+  <h5>
+    Age:
+    <br>
+  </h5>
+  <h4>
+    <%= @dog.age %>
+  </h4>
+
+  <h5>
+    Breed:
+    <br>
+  </h5>
+  <h4>
+    <%= @dog.breed %>
+  </h4>
+
+  <h5>
+    Is a good boy?
+    <br>
+  </h5>
+  <h4>
+    <%= @dog.goodboy %>
+  </h4>
+
+  <br>
+</div>
+<hr>
+<div class="center">
+  <h5 class="teal-text"><%= button_to "Back", dogs_path, :method => "get" %></h5>
+</div>

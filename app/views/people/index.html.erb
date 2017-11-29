@@ -14,15 +14,9 @@
       <div class="card-content blue-grey-text">
         <span class="card-title center"><%= person.first_name %>  <br>  <%= person.last_name %></span>
         <div class="card-action center">
-          <button class = "btn waves-effect waves-light blue-grey">
             <%= link_to 'View', person_path(person) %>
-          </button>
-          <button class = "btn waves-effect waves-light blue-grey">
             <%= link_to 'Edit', edit_person_path(person) %>
-          </button>
-          <button class = "btn waves-effect waves-light blue-grey">
             <%= link_to 'Delete', person, method: :delete %>
-          </button>
         </div>
       </div>
     </div>

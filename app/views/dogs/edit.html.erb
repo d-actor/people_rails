@@ -1,2 +1,35 @@
-<h1>Dogs#edit</h1>
-<p>Find me in app/views/dogs/edit.html.erb</p>
+<h2 class="center white-text">Edit Doggo</h2>
+<%= render 'layouts/navbar' %>
+<%= yield %>
+<hr>
+<div class="container white">
+  <%= form_for @dog do |f| %>
+
+    <%= f.label :name %>
+    <%= f.text_field :name %>
+    <br>
+
+    <%= f.label :age %>
+    <%= f.text_field :age %>
+    <br>
+
+    <%= f.label :breed %>
+    <%= f.text_field :breed %>
+    <br>
+
+    <%= f.check_box :goodboy %>
+    <%= f.label :goodboy %>
+    <br>
+
+    <div class="center blue-text">
+      <%= f.submit %>
+    </div>
+
+  <% end %>
+</div>
+
+<br>
+<hr>
+<div class="center">
+  <h5 class="teal-text"><%= button_to "Back", dogs_path, :method => "get" %></h5>
+</div>
