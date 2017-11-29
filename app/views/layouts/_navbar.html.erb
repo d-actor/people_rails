@@ -1,9 +1,4 @@
 <div class="center">
-  <div class="btn white">
-    <%= link_to 'Home', people_path %>
-  </div>
-
-  <div class="btn white">
-  <%= link_to 'About', root_path %>
-  </div>
+  <h5 class="teal-text"><%= button_to 'Home', people_path, :method => "get" %></h5>
+  <h5 class="teal-text"><%= button_to 'About', root_path, :method => "get" %></h5>
 </div>
