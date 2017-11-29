@@ -19,9 +19,9 @@ end
 
 30.times do
   Dog.create(
-    name: Faker::Dog.name,
+    name: Faker::Cat.name,
     age: Faker::Number.between(1, 16),
-    breed: Faker::Dog.breed,
+    breed: Faker::Hipster.word,
     goodboy: true,
     )
 end
